@@ -1,0 +1,20 @@
+{
+	"$schema": "https://schemas.elgato.com/streamdeck/plugins/layout.json",
+	"id": "com.jere.jellyfin-remote.panel",
+	"items": [
+		{ "key": "panel", "type": "pixmap", "rect": [0, 0, 200, 100], "value": "imgs/layouts/panel.png", "zOrder": 0 },
+		{ "key": "glyph", "type": "pixmap", "rect": [16, 24, 52, 52], "value": "imgs/layouts/tv.png", "zOrder": 1 },
+		{
+			"key": "name", "type": "text", "rect": [80, 14, 110, 20], "value": "Jellyfin",
+			"alignment": "left", "color": "#8FB0D4", "font": { "size": 14, "weight": 500 }, "text-overflow": "ellipsis", "zOrder": 1
+		},
+		{
+			"key": "value", "type": "text", "rect": [80, 35, 110, 31], "value": "",
+			"alignment": "left", "color": "#EAF3FC", "font": { "size": 26, "weight": 600 }, "zOrder": 1
+		},
+		{
+			"key": "indicator", "type": "bar", "rect": [80, 72, 104, 8], "value": 0, "range": { "min": 0, "max": 100 },
+			"subtype": 0, "bar_bg_c": "#2C3E57", "bar_fill_c": "#9CC3EE", "border_w": 0, "zOrder": 1
+		}
+	]
+}

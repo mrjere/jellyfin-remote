@@ -1,0 +1,187 @@
+{
+	"Name": "Jellyfin Remote",
+	"Version": "3.0.0.0",
+	"Author": "Jere",
+	"Actions": [
+		{
+			"Name": "Volume",
+			"UUID": "com.jere.jellyfin-remote.volume",
+			"Icon": "imgs/actions/volume/icon",
+			"Tooltip": "Turn for volume, press to play or pause, tap the strip to mute.",
+			"PropertyInspectorPath": "ui/volume.html",
+			"Controllers": [
+				"Encoder"
+			],
+			"Encoder": {
+				"layout": "layouts/panel.json",
+				"Icon": "imgs/actions/volume/dial",
+				"TriggerDescription": {
+					"Rotate": "Volume",
+					"Push": "Play / pause",
+					"Touch": "Mute"
+				}
+			},
+			"States": [
+				{
+					"Image": "imgs/actions/volume/dial"
+				}
+			]
+		},
+		{
+			"Name": "Seek",
+			"UUID": "com.jere.jellyfin-remote.scrub",
+			"Icon": "imgs/actions/scrub/icon",
+			"Tooltip": "Turn to seek, press to play or pause. Tap the strip: left back 10s, right forward 30s. Hold: stop.",
+			"PropertyInspectorPath": "ui/scrub.html",
+			"Controllers": [
+				"Encoder"
+			],
+			"Encoder": {
+				"layout": "layouts/panel.json",
+				"Icon": "imgs/actions/scrub/dial",
+				"TriggerDescription": {
+					"Rotate": "Seek",
+					"Push": "Play / pause",
+					"Touch": "Left −10s · right +30s",
+					"LongTouch": "Stop"
+				}
+			},
+			"States": [
+				{
+					"Image": "imgs/actions/scrub/dial"
+				}
+			]
+		},
+		{
+			"Name": "Subtitles & audio",
+			"UUID": "com.jere.jellyfin-remote.tracks",
+			"Icon": "imgs/actions/tracks/icon",
+			"Tooltip": "Turn through subtitles, press for the next audio track, tap the strip to turn subtitles off or back on.",
+			"PropertyInspectorPath": "ui/tracks.html",
+			"Controllers": [
+				"Encoder"
+			],
+			"Encoder": {
+				"layout": "layouts/panel.json",
+				"Icon": "imgs/actions/tracks/dial",
+				"TriggerDescription": {
+					"Rotate": "Subtitles",
+					"Push": "Audio track",
+					"Touch": "Subtitles on / off",
+					"LongTouch": "Audio track"
+				}
+			},
+			"States": [
+				{
+					"Image": "imgs/actions/tracks/dial"
+				}
+			]
+		},
+		{
+			"Name": "Navigate menus",
+			"UUID": "com.jere.jellyfin-remote.navigate",
+			"Icon": "imgs/actions/navigate/icon",
+			"Tooltip": "Turn for left/right, hold the dial and turn for up/down, click for OK. Tap the strip for back, hold for home.",
+			"PropertyInspectorPath": "ui/navigate.html",
+			"Controllers": [
+				"Encoder"
+			],
+			"Encoder": {
+				"layout": "layouts/panel.json",
+				"Icon": "imgs/actions/navigate/dial",
+				"TriggerDescription": {
+					"Rotate": "Left/right · held: up/down",
+					"Push": "OK (click)",
+					"Touch": "Back",
+					"LongTouch": "Home"
+				}
+			},
+			"States": [
+				{
+					"Image": "imgs/actions/navigate/dial"
+				}
+			]
+		},
+		{
+			"Name": "Continue watching",
+			"UUID": "com.jere.jellyfin-remote.library",
+			"Icon": "imgs/actions/library/icon",
+			"Tooltip": "Turn through Continue Watching, press to play it. Tap the strip for Next Up, hold to play from the start.",
+			"PropertyInspectorPath": "ui/library.html",
+			"Controllers": [
+				"Encoder"
+			],
+			"Encoder": {
+				"layout": "layouts/panel.json",
+				"Icon": "imgs/actions/library/dial",
+				"TriggerDescription": {
+					"Rotate": "Choose",
+					"Push": "Play",
+					"Touch": "Continue / Next up",
+					"LongTouch": "Play from start"
+				}
+			},
+			"States": [
+				{
+					"Image": "imgs/actions/library/dial"
+				}
+			]
+		},
+		{
+			"Name": "Now playing",
+			"UUID": "com.jere.jellyfin-remote.nowplaying",
+			"Icon": "imgs/actions/nowplaying/icon",
+			"Tooltip": "Shows the poster of what's playing. Press to play or pause.",
+			"PropertyInspectorPath": "ui/nowplaying.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/nowplaying/key",
+					"ShowTitle": true
+				}
+			]
+		},
+		{
+			"Name": "Remote button",
+			"UUID": "com.jere.jellyfin-remote.remote",
+			"Icon": "imgs/actions/remote/icon",
+			"Tooltip": "Any remote button: pick which one in its settings.",
+			"PropertyInspectorPath": "ui/remote.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/remote/playpause",
+					"ShowTitle": true
+				}
+			]
+		}
+	],
+	"Category": "Jellyfin Remote",
+	"CategoryIcon": "imgs/plugin/category-icon",
+	"CodePath": "bin/plugin.js",
+	"Description": "A cinema-style remote for Jellyfin: volume, seek, tracks, menu navigation, now playing and remote buttons, for any player on your server.",
+	"Icon": "imgs/plugin/marketplace",
+	"SDKVersion": 3,
+	"Software": {
+		"MinimumVersion": "7.1"
+	},
+	"OS": [
+		{
+			"Platform": "mac",
+			"MinimumVersion": "12"
+		},
+		{
+			"Platform": "windows",
+			"MinimumVersion": "10"
+		}
+	],
+	"Nodejs": {
+		"Version": "24",
+		"Debug": "enabled"
+	},
+	"UUID": "com.jere.jellyfin-remote"
+}
